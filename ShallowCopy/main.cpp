@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 // Section 13
 // test 1
+=======
+// Section 13 
+
+>>>>>>> 05d26cc6d14655b8fcd939aad25e1125fe3f7406
 // Copy Constructor - Shallow Copy
 #include <iostream>
 
