@@ -5,8 +5,10 @@
 
 #include "Movies.h"
 
+using namespace std;
+
 // Function prototypes
-void increment_watched();
+void increment_watched(Movies &movies, std::string name);
 void add_movie();
 
 /******************************************************************
@@ -18,6 +20,15 @@ void add_movie();
  *  otherwise the watched count could not be incremented
  *  because the name of the movie was not found
  * ***************************************************************/
+void increment_watched(Movies &movies, std::string name) {
+  if (movies.increment_watched(name)) {
+    cout << "watch number for " << name << " was successfully increased"
+         << endl;
+  } else {
+    cout << "watch number cannot be increased, " << name
+         << " is not in our database" << endl;
+  }
+}
 
 /******************************************************************
  * add_movie expects a reference to a Movies object
